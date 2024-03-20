@@ -10,6 +10,8 @@ const {where} = require("sequelize");
 const nodemailer = require("nodemailer");
 const gmarket=db.gmarket;
 const gateway=db.gateway;
+require('dotenv').config();
+
 exports.buydata =  async (req, res) => {
     const userid = req.body.userId;
 

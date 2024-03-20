@@ -6,6 +6,7 @@ const data=db.data;
 var request = require('request');
 const {response} = require("express");
 const {where} = require("sequelize");
+require('dotenv').config();
 
 exports.buyelect =  async (req, res) => {
     const userid = req.body.userId;

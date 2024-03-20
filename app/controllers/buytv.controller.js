@@ -7,6 +7,7 @@ var request = require('request');
 const {response} = require("express");
 const {where} = require("sequelize");
 const nodemailer = require("nodemailer");
+require('dotenv').config();
 
 exports.buytv =  async (req, res) => {
     const userid = req.body.userId;

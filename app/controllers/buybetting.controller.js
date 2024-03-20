@@ -7,6 +7,7 @@ const {response} = require("express");
 const {where} = require("sequelize");
 const { body, validationResult } = require('express-validator');
 const nodemailer = require("nodemailer");
+require('dotenv').config();
 
 exports.bet =  async (req, res) => {
     const userid = req.body.userId;
