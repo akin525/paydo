@@ -15,11 +15,11 @@ exports.data =  async (req, res) => {
         const allplan= await data.findAll({
             where:{
                 network:req.body.network,
-                status:'1',
+                status:1,
             },
         });
 
-        // console.log(allplan);
+        console.log(allplan);
         return res.status(200).send({
             status:1,
             data:{
@@ -32,6 +32,6 @@ exports.data =  async (req, res) => {
             message: error.message});
     }
 
-    res.status(200).send("User Content.");
+    // res.status(200).send("User Content.");
 
 };

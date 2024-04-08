@@ -1,6 +1,9 @@
 module.exports = (sequelize, Sequelize) => {
-    const data = sequelize.define("data",{
+    const data= sequelize.define("samms", {
         plan_id: {
+            type: Sequelize.STRING
+        },
+        cat_id: {
             type: Sequelize.STRING
         },
         network: {
@@ -21,6 +24,8 @@ module.exports = (sequelize, Sequelize) => {
         ramount: {
             type: Sequelize.STRING
         },
+
     });
     return data;
+
 };
