@@ -26,7 +26,7 @@ module.exports = (sequelize, Sequelize) => {
         },
     });
 
-    deposit.belongsTo(sequelize.models.bos, { foreignKey: 'username', as: 'bill' });
+    // deposit.belongsTo(sequelize.models.bos, { foreignKey: 'username', as: 'bill' });
 
     return deposit;
 };

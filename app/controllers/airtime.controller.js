@@ -92,12 +92,12 @@ exports.airtime =  async (req, res) => {
 
     const bil= await bill.create({
             username:user.username,
-            plan:"Airtime--"+req.body.network,
+            product:"Airtime--"+req.body.network,
             amount:req.body.amount,
-            server_res:"airtime",
-        result:"0",
-        phone:req.body.number,
-        refid:req.body.refid,
+        server_response:"airtime",
+       status:"0",
+        number:req.body.number,
+        transactionid:req.body.refid,
 
         });
         const bo="Airtime Successfully Delivered To "+req.body.number;
