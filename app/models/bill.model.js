@@ -1,37 +1,28 @@
 module.exports = (sequelize, Sequelize) => {
-    const bill = sequelize.define("bill_payments", {
+    const bill = sequelize.define("bos", {
 
         username: {
             type: Sequelize.STRING
         },
-        product: {
+        plan: {
             type: Sequelize.STRING
         },
         amount: {
             type: Sequelize.STRING
         },
-        status: {
+        result: {
             type: Sequelize.STRING
         },
-        number: {
+        phone: {
             type: Sequelize.STRING
         },
-        transactionid: {
-            type: Sequelize.STRING
-        },
-        timestamp: {
+        refid: {
             type: Sequelize.STRING
         },
         date: {
             type: Sequelize.STRING
         },
-        balance: {
-            type: Sequelize.STRING
-        },
-        fbalance: {
-            type: Sequelize.STRING
-        },
-        server_response:{
+        server_res:{
             type: Sequelize.STRING
         },
         token:{
