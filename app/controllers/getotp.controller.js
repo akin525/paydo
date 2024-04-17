@@ -9,7 +9,7 @@ var request = require('request');
 const {response} = require("express");
 const {where} = require("sequelize");
 const nodemailer = require("nodemailer");
-require('dotenv').config();
+// require('dotenv').config();
 
 exports.otp =  async (req, res) => {
     // const { email} = req.query;
