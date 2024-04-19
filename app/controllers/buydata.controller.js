@@ -109,10 +109,10 @@ const o=User.wallet < product.tamount;
             username:user.username,
             product:product.plan,
             amount:product.tamount,
-            server_response:"data",
-        status:"0",
-        number:req.body.number,
-            transactionid:req.body.refid,
+            server_res:"data",
+            result:"0",
+            phone:req.body.number,
+            refid:req.body.refid,
 
         });
         const cc=await gmarket.create({
