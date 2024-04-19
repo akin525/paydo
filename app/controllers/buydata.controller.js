@@ -107,7 +107,7 @@ const o=User.wallet < product.tamount;
 
         const bil= await bill.create({
             username:user.username,
-            product:product.plan,
+            plan:product.plan,
             amount:product.tamount,
             server_res:"data",
             result:"0",
