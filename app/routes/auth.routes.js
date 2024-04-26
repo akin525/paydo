@@ -37,6 +37,9 @@ const Fingerprint=require("../controllers/finger.controller");
 const Resend =require("../controllers/getotp.controller");
 const verifybe=require("../controllers/verifybetting.controller");
 const buybet=require("../controllers/buybetting.controller");
+const account2=require("../controllers/generateaccountall.controller");
+const Elect=require("../controllers/elect.controller");
+
 module.exports = function(app) {
   app.use(function(req, res, next) {
     res.header(
@@ -95,6 +98,7 @@ module.exports = function(app) {
   app.post("/api/auth/google", googl.google);
 
       app.post("/api/auth/data", data.data);
+      app.post("/api/auth/elect", Elect.elect);
       app.post("/api/auth/createlock", createlock.safelock);
       app.get("/api/auth/allock",
           [authJwt.verifyToken],
@@ -107,6 +111,7 @@ module.exports = function(app) {
  app.get("/api/auth/alldeposit",
           [authJwt.verifyToken],
           alldeposit.alldeposit);
+    app.post("/api/auth/newaccount1", account2.generateaccountone);
 
   app.post("/api/auth/signout", controller.signout);
   app.post("/api/auth/delete", controller.delete);
