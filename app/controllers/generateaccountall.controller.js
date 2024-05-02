@@ -116,7 +116,7 @@ exports.generateaccountone = async (req, res) => {
 
     const users = await User.findOne({
       where: {
-        username: req.body.username,
+        id: req.body.userId,
       },
     }); // Assuming productid is an array
 
