@@ -111,7 +111,7 @@ module.exports = function(app) {
  app.get("/api/auth/alldeposit",
           [authJwt.verifyToken],
           alldeposit.alldeposit);
-    app.post("/api/auth/newaccount", account.generateaccountone);
+    app.post("/api/auth/generateaccount", account.generateaccountone);
 
   app.post("/api/auth/signout", controller.signout);
   app.post("/api/auth/delete", controller.delete);
