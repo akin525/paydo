@@ -37,7 +37,7 @@ const Fingerprint=require("../controllers/finger.controller");
 const Resend =require("../controllers/getotp.controller");
 const verifybe=require("../controllers/verifybetting.controller");
 const buybet=require("../controllers/buybetting.controller");
-const account2=require("../controllers/generateaccountall.controller");
+const account=require("../controllers/generateaccountall.controller");
 const Elect=require("../controllers/elect.controller");
 
 module.exports = function(app) {
@@ -111,7 +111,7 @@ module.exports = function(app) {
  app.get("/api/auth/alldeposit",
           [authJwt.verifyToken],
           alldeposit.alldeposit);
-    app.post("/api/auth/newaccount1", account2.generateaccountone);
+    app.post("/api/auth/newaccount", account.generateaccountone);
 
   app.post("/api/auth/signout", controller.signout);
   app.post("/api/auth/delete", controller.delete);
