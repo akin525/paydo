@@ -88,19 +88,19 @@ exports.generateAccountall = async (req, res) => {
 function createApiOptions(user) {
   var options = {
     method: 'POST',
-    url: 'https://api.paylony.com/api/v1/create_account',
+    url: process.env.VIRTUAL_URL,
     headers: {
-      Authorization: 'Bearer sk_live_av30amcd3piinbfm48j0v8iv8sd5hm81rhqikjz',
+      apikey: process.env.Authorize_Key,
     },
     formData: {
       "firstname": user.username,
       "lastname": user.name,
-      "address": user.address,
-      "gender": user.gender,
+      "address": "Lagos Nigeria",
+      "gender": "Male",
       "email": user.email,
-      "phone": user.phone,
-      "dob": user.dob,
-      "provider": "gtb",
+      "phone": "07040237649",
+      "dob": "1998-01-04",
+      "provider": "Safeheaven",
     }
   };
   return options;
@@ -126,9 +126,9 @@ exports.generateaccountone = async (req, res) => {
 
     var options =  {
       'method': 'POST',
-      'url': 'https://api.paylony.com/api/v1/create_account',
+      'url': process.env.VIRTUAL_URL,
       'headers': {
-        Authorization: 'Bearer sk_live_av30amcd3piinbfm48j0v8iv8sd5hm81rhqikjz'
+        apikey: process.env.Authorize_Key
       },
       formData:{
         "firstname": users.username,
