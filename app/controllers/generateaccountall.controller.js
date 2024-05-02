@@ -142,7 +142,7 @@ exports.generateaccountone = async (req, res) => {
       }
     };
 
-
+``
     request(options, function (error, response) {
       if (error) throw new Error(error);
       const data = JSON.parse(response.body);
