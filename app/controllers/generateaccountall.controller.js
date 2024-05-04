@@ -62,8 +62,7 @@ exports.generateaccountone = async (req, res) => {
           status: "1",
           user:users.username,
           message:"Account Generated Successful",
-          server_res:data,
-          obj:objectToUpdate
+          server_res:data
         });
 
       // res.status(200).send(response.body);
