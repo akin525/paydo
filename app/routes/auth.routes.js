@@ -63,6 +63,7 @@ module.exports = function(app) {
   app.post("/api/auth/verifybetting", verifybe.verifybetting);
   app.post("/api/auth/buybet", buybet.bet);
   app.post("/api/auth/signin", controller.signin);
+  app.post("/generateaccount", accounts.generateaccountone);
   app.post("/api/auth/verifyemail", verifyemail.verifyemail);
   app.get("/api/auth/dashboard",
       [authJwt.verifyToken],
