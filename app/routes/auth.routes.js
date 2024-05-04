@@ -114,5 +114,5 @@ module.exports = function(app) {
 
   app.post("/api/auth/signout", controller.signout);
   app.post("/api/auth/delete", controller.delete);
-    app.post("api/auth/newaccount1", account.generateaccountone);
+    app.post("api/auth/generate", account.generateaccountone);
 };
