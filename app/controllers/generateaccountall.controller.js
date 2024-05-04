@@ -10,10 +10,10 @@ const {where} = require("sequelize");
 
 const axios = require('axios');
 exports.generateaccountone = async (req, res) => {
-  return res.status(200).send({
-    status: '1',
-    message: req.body,
-  });
+  // return res.status(200).send({
+  //   status: '1',
+  //   message: req.body,
+  // });
 
   try {
 

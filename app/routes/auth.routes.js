@@ -42,9 +42,7 @@ const accounts=require("../controllers/generateaccountall.controller");
 const Elect=require("../controllers/elect.controller");
 
 module.exports = function(app) {
-    Object.keys(require.cache).forEach(function(key) {
-        delete require.cache[key];
-    });
+
   app.use(function(req, res, next) {
     res.header(
       "Access-Control-Allow-Headers",
