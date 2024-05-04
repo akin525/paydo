@@ -44,8 +44,8 @@ exports.generateaccountone = async (req, res) => {
     request(options, function (error, response) {
       if (error) throw new Error(error);
       const data = JSON.parse(response.body);
-      console.log(data.success);
-        console.log(data);
+      // console.log(data.success);
+      //   console.log(data);
         const objectToUpdate = {
           account_number: data.data.data.account_number,
           account_name: data.data.data.account_name,
@@ -62,7 +62,8 @@ exports.generateaccountone = async (req, res) => {
           status: "1",
           user:users.username,
           message:"Account Generated Successful",
-          server_res:data
+          server_res:data,
+          obj:objectToUpdate
         });
 
       // res.status(200).send(response.body);
