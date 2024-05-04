@@ -47,9 +47,9 @@ exports.generateaccountone = async (req, res) => {
       console.log(data.success);
         console.log(data);
         const objectToUpdate = {
-          account_number: data.data.account_number,
-          account_name: data.data.account_name,
-          bank1: data.data.provider,
+          account_number: data.data.data.account_number,
+          account_name: data.data.data.account_name,
+          bank1: data.data.data.provider,
         };
         User.findAll({ where: { username: users.username}}).then((result) => {
           if(result){
