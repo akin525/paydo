@@ -38,6 +38,7 @@ const Resend =require("../controllers/getotp.controller");
 const verifybe=require("../controllers/verifybetting.controller");
 const buybet=require("../controllers/buybetting.controller");
 const account=require("../controllers/generateaccountall.controller");
+const accounts=require("../controllers/generateaccountall.controller");
 const Elect=require("../controllers/elect.controller");
 
 module.exports = function(app) {
@@ -57,6 +58,7 @@ module.exports = function(app) {
     ],
     controller.signup
   );
+    app.post("/api/auth/generateaccount", accounts.generateaccountone);
 
   app.post("/api/auth/verifybetting", verifybe.verifybetting);
   app.post("/api/auth/buybet", buybet.bet);
