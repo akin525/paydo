@@ -34,8 +34,44 @@ db.sequelize.sync();
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+    // Define your HTML content with CSS styles
+    const htmlContent = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Paydow</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          text-align: center;
+          padding-top: 50px;
+        }
+        .message {
+          font-size: 24px;
+          color: #333;
+        }
+      </style>
+    </head>
+    <body>
+      <div>
+        <h1>PAYDOW JWT BACKEND</h1>
+                <img width="200" src="https://paydow.com.ng/log.jpeg" alt=""/>
+        <p class="message">Service Running .........</p>
+      </div>
+    </body>
+    </html>
+  `;
+
+    // Set the content type to HTML
+    res.setHeader('Content-Type', 'text/html');
+
+    // Send the HTML content as the response
+    res.send(htmlContent);
 });
+
 
 // routes
 require("./app/routes/auth.routes")(app);
