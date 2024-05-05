@@ -44,13 +44,15 @@ exports.generateaccountone = async (req, res) => {
     request(options, function (error, response) {
       if (error) throw new Error(error);
       const data = JSON.parse(response.body);
-      // console.log(data.success);
-      //   console.log(data);
+      console.log(data.success);
+        console.log(data);
         const objectToUpdate = {
-          account_number: data.data.account_number,
-          account_name: data.data.account_name,
-          bank1: data.data.provider,
+          account_number: data.data.data.account_number,
+          account_name: data.data.data.account_name,
+          bank1: data.data.data.provider,
+          bank: data.data.data.provider,
         };
+        console.log(objectToUpdate);
         User.findAll({ where: { username: users.username}}).then((result) => {
           if(result){
             result[0].set(objectToUpdate);
