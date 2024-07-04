@@ -40,6 +40,7 @@ const buybet=require("../controllers/buybetting.controller");
 const account=require("../controllers/generateaccountall.controller");
 const accounts=require("../controllers/generateaccountall.controller");
 const Elect=require("../controllers/elect.controller");
+const statistic=require("../controllers/statistic.controller");
 
 module.exports = function(app) {
 
@@ -120,5 +121,6 @@ module.exports = function(app) {
   app.post("/api/auth/delete", controller.delete);
     app.post("/api/auth/newaccount1", account.generateaccountone);
     app.post("/api/auth/generate", account.generateaccountone);
+    app.post("/api/auth/chart", statistic.statistic);
 
 };
